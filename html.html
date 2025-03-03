@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src=".js"></script>
+ 
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+      <h1>Hello, It's Me</h1>
+      <img src="passport.jpg" alt="Your Name" class="profile-photo">
+      <h2>BHARTH M</h2>
+      <p>Web Designer | Developer | Creative</p>
+      <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/bharth-m" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/bharth1000" target="_blank" class="icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/bharth_1000?igsh=MXZodTkxeWI1eXgxeg==" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <nav class="right-nav">
+      <a href="#about">ABOUT ME</a>
+      <a href="#portfolio">CONTACT INFO</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#certificates">CERTIFIACATES</a>
+      <a href="#projects">PROJECTS</a>
+    </nav>
+  </header>
+
+  <section id="about" class="section-container">
+    <div class="about-container">
+      <h2 style="text-align: center; font-size: 50px;">ABOUT <span class="highlight">ME</span></h2>
+      <h4 style="text-align: left;">
+        I am an Electronic and Communication Engineering student with a keen interest
+        in Information Technology. My passion for IT drives me to explore areas such as
+        development and web software designing. I have hands-on experience in programming
+        languages like Java, Python.
+      </h4>
+    </div>
+  </section>
+  
+  <section id="portfolio">
+    <div class="cont-container">
+      <h2 style="text-align: center;font-size: 50px">CONTACT <span class="highlight">INFO</span></h2>
+      <div class="my-icons">
+        <a href="#" target="_blank" class="icon"><i class="fa-solid fa-phone"></i> 7418437749</a><br><br>
+        <a href="https://www.linkedin.com/in/bharath-m-27866a269" target="blank" class="icon"><i class="fa-brands fa-linkedin"></i> LINKED IN</a><br><br>
+        <a href="#" target="blank" class="icon"><i class="fa-brands fa-github"></i> GIT HUB</a><br><br>
+        <a href="https://leetcode.com/u/BHARTH_M/" target="blank" class="icon"><i class="fa-solid fa-bars"></i> LEETCODE</a>
+      </div>
+    </div>
+  </section>
+  <BR>
+   <BR>
+    
+  
+ 
+  <!-- Skills Section -->
+<section id="skills">
+  <h2 style="text-align: center; font-size: 50px">SKILLS</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <h3>Languages</h3>
+      <div class="circle">
+        <div class="percentage">80%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>Problem Solving</h3>
+      <div class="circle">
+        <div class="percentage">75%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>Soft Skills</h3>
+      <div class="circle">
+        <div class="percentage">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <h3>Technical Skills</h3>
+      <div class="circle">
+        <div class="percentage">85%</div>
+      </div>
+    </div>
+  </div>
+</section>
+<BR>
+ <BR>
+  <BR>
+ 
+ 
+<section id="certificates">
+  <h2 style="text-align: center; font-size: 50px">CERTIFICATES</h2>
+  <button class="toggle-view-btn" onclick="toggleCertificates()">View All Certificates</button>
+  <div class="certificate-section">
+    <div class="certificate-container">
+      <div class="certificate" onclick="openModal(this)">
+        <img src="cer1.jpg" alt="Certificate 1">
+      </div>
+      <div class="certificate" onclick="openModal(this)">
+        <img src="cer2.jpg" alt="Certificate 2">
+      </div>
+      <div class="certificate" onclick="openModal(this)">
+        <img src="cer3.jpg" alt="Certificate 3">
+      </div>
+      <div class="certificate" onclick="openModal(this)">
+        <img src="cer4.jpg" alt="Certificate 4">
+      </div>
+      <div class="certificate" onclick="openModal(this)">
+        <img src="cer5.jpg" alt="Certificate 5">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Section -->
+<section id="projects">
+<h2 style="text-align: center; font-size: 50px">PROJECTS</h2>
+<div class="project-section">
+ 
+    <div class="project-container">
+        <a href="https://github.com/bharth1000/PRO" class="project">
+            <img src="data1.png" alt="Project 1">
+            <div class="project-details">
+                <h6>CUSTOMER SATISFIACATION</H6>
+               
+                
+             
+            </div>
+        </a>
+        
+        <!-- Add more projects as needed -->
+    </div>
+</div>
+</section>
+
+<section id="download-cv">
+    <h5 style="text-align: center; font-size: 50px">DOWNLOAD CV</h5>
+    <a href="bharth (2).pdf" class="download-btn" download>Download CV</a>
+</section>
+
+<!-- Modal for Enlarged View -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img class="modal-content" id="modal-img">
+</div>
+
+<script>
+  function openModal(element) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.style.display = "flex";
+    modalImg.src = element.querySelector("img").src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+  }
+
+  function toggleCertificates() {
+    const section = document.querySelector('.certificate-section');
+    section.classList.toggle('expanded');
+  }
+</script>
+
+</body>
+</html>
